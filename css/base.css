@@ -9,12 +9,8 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: #e5e5e5;
   font-family: sans-serif;
   line-height: 1.4;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1360px;
+  margin: 0;
 }
