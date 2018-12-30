@@ -1,14 +1,18 @@
+/* container styles */
 .container {
   margin: 0 auto;
   max-width: 1360px;
   padding: 15px;
 }
 
+/* header styles */
+/* nav styles */
 .nav {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  padding: 15px;
+
+  padding: 15px 0 15px 15px;
 }
 
 .nav__title,
@@ -18,7 +22,7 @@
 
 .nav__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-content: center;
 
   list-style-type: none;
@@ -30,12 +34,116 @@
   margin-right: 10px;
 }
 
+.nav__item--last {
+  margin-right: 0;
+}
+
 .nav__link {
   color: #333;
-  text-decoration: none;
   padding: 10px;
+  text-decoration: none;
 }
 
 .nav__link:hover {
-  color: #fff;
+  color: #673ab7;
+}
+
+/* intro styles */
+.intro {
+  display: flex;
+  height: 300px;
+}
+
+.intro__info,
+.intro__img {
+  width: 50%;
+}
+
+.intro__info {
+  padding: 10px 0;
+}
+
+.intro__img {
+  background-color: #cccccc;
+  background-image: url("{{site.baseurl}}/images/ocean-wave.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* main styles */
+
+/* gallery styles */
+.gallery__gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery__img {
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  height: 400px;
+  margin: 0 10px 10px 0;
+  width: 300px;
+}
+
+.gallery__img--sunrise {
+  background-image: url("{{site.baseurl}}/images/sunrise.jpg");
+}
+
+.gallery__img--ocean {
+  background-image: url("{{site.baseurl}}/images/ocean.jpg");
+}
+
+.gallery__img--waterdrop {
+  background-image: url("{{site.baseurl}}/images/waterdrop.jpg");
+}
+
+.gallery__img--wave {
+  background-image: url("{{site.baseurl}}/images/wave.jpg");
+}
+
+.img__text {
+  color: black;
+  font-size: 2em;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin-top: 0;
+  padding-left: 10px;
+}
+
+/* responsive styles */
+@media screen and (max-width: 1000px) {
+  .intro__info {
+    width: 100%;
+  }
+
+  .intro__img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav__list {
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .nav__link {
+     padding: 10px 10px 10px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .intro__info br {
+    display: none;
+  }
 }
